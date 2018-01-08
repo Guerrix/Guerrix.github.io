@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css?family=Hind+Madurai:400,600');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 20px;
+    font-family: "Hind Madurai", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: #ddd;
+}
+
+a{
+    color: #ddd;
+    text-decoration: none;
+    background-image: linear-gradient(180deg, transparent 80%, #2A8CFF 90%, transparent 0), linear-gradient(180deg, transparent 80%, #444 90%, transparent 0);
+    background-size: 0 100%, 100% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease,
+    color 0.2s ease;
+}
+a:hover{
+    color: #2A8CFF;
+    background-size: 100% 100%, 100% 100%;
+}
+
+nav,
+header,
+section,
+footer{
+    padding-left: calc(50% - 500px);
+    padding-right: calc(50% - 500px);
+}
+
+header,
+section,
+footer{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+h1, h2, h3{
+    line-height: 1.2;
+}
+
+h3{
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+p:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+/* nav */
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background: rgba(0,0,0,.95);
+    color: #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+nav p{
+    margin-bottom: 0 !important;
+}
+
+/* header */
+
+header{
+    overflow: hidden;
+    text-align: center;
+    background: linear-gradient(transparent, #000);
+    height: 600px;
+}
+header h1{
+    font-weight: 600;
+}
+header h2{
+    font-weight: 400;
+}
+header img{
+    width: 430px;
+    height: auto;
+}
+
+/* about */
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .text{
+    width: 650px;
+    margin-right: 50px;
+}
+.about .illustration{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.about .illustration img{
+    height: 100px;
+    margin-right: 10px;
+}
+
+/* clients */
+
+.clients{
+    background: #fff;
+    color: #111;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+}
+.clients .testimonials{
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: 1s ease-in left;
+}
+.clients blockquote{
+    text-align: center;
+    width: 33.33%;
+    padding-left: calc(50% - 500px);
+    padding-right: calc(50% - 500px);
+    opacity: 0;
+    transition: .5s ease-in opacity;
+}
+.clients blockquote:first-child{
+    opacity: 1;
+}
+.clients blockquote p{
+    font-family: serif;
+    font-style: italic;
+}
+
+.clients .author{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+.clients img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.clients .author p{
+    font-family: "Hind Madurai", sans-serif;
+    font-style: normal;
+}
+
+/* more */
+
+.more{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.more ul{
+    list-style: none;
+}
+
+.blog{
+    width: 650px;
+    margin-right: 50px;
+}
+
+.social{
+    width: 300px;
+}
+
+.social .icon{
+    width: 40px;
+    display: inline-block;
+    opacity: .5;
+}
+
+.social .icon img{
+    height: 18px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.blog .date{
+    width: 80px;
+    display: inline-block;
+    opacity: .5;
+}
+
+.blog .title{
+    display: inline-block;
+}
+
+/* footer */
+
+footer{
+    text-align: center;
+    padding-top: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 1000px;
+    margin: 0 auto;
+    border-top: 1px solid #444;
+}
+footer h3{
+    margin-bottom: 0;
+}
+footer .email{
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1100px){
+    nav,
+    header,
+    section,
+    footer{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    footer{
+        width: 100%;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+}
+
+@media screen and (max-width: 740px){
+    nav,
+    header,
+    section,
+    footer{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    footer{
+        width: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    nav{
+        display: none;
+    }
+
+    header img{
+        width: 280px;
+        height: auto;
+    }
+
+    .about{
+        display: block;
+    }
+    .about .text{
+        width: 100%;
+    }
+    .about .illustration{
+        width: 100%;
+        justify-content: center;
+        padding-top: 50px
+    }
+
+    .clients blockquote{
+        text-align: left;
+    }
+
+    .more{
+        display: block;
+    }
+    .more .blog{
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    .more-social{
+        width: 100%;
+    }
+}
+
