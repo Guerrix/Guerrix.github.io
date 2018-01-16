@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Hind+Madurai:400,600');
+@import url('https://fonts.googleapis.com/css?family=Hind+Madurai:300,400,600');
 
 *{
     margin: 0;
@@ -9,7 +9,7 @@
 html{
     font-size: 20px;
     font-family: "Hind Madurai", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.5;
 }
 
@@ -18,19 +18,20 @@ body{
     padding: 0;
     background: #111;
     color: #ddd;
+    transition: opacity .2s ease-in;
 }
 
 a{
     color: #ddd;
     text-decoration: none;
-    background-image: linear-gradient(180deg, transparent 80%, #2A8CFF 90%, transparent 0), linear-gradient(180deg, transparent 80%, #444 90%, transparent 0);
+    background-image: linear-gradient(180deg, transparent 80%, #AF6FFC 90%, transparent 0), linear-gradient(180deg, transparent 80%, #444 90%, transparent 0);
     background-size: 0 100%, 100% 100%;
     background-repeat: no-repeat;
     transition: background-size 0.2s ease,
     color 0.2s ease;
 }
 a:hover{
-    color: #2A8CFF;
+    color: #AF6FFC;
     background-size: 100% 100%, 100% 100%;
 }
 
@@ -65,12 +66,12 @@ p:not(:last-child){
 /* nav */
 
 nav{
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
     height: 50px;
     background: rgba(0,0,0,.95);
-    color: #ddd;
     position: fixed;
     top: 0;
     left: 0;
@@ -79,6 +80,19 @@ nav{
 }
 nav p{
     margin-bottom: 0 !important;
+}
+nav .id{
+    text-align: left;
+    font-weight: 600;
+}
+nav .contact{
+    text-align: right;
+}
+nav a{
+    background: none;
+}
+nav .toggle:after{
+    content: "☀";
 }
 
 /* header */
@@ -93,11 +107,12 @@ header h1{
     font-weight: 600;
 }
 header h2{
-    font-weight: 400;
+    font-weight: 300;
 }
 header img{
-    width: 430px;
+    width: 300px;
     height: auto;
+    margin-top: 100px;
 }
 
 /* about */
@@ -144,12 +159,12 @@ header img{
 .clients blockquote:nth-child(3){ grid-area: second; }
 
 .clients blockquote{
-    text-align: center;
     background: #fff;
     color: #111;
-    padding: 50px;
+    padding: 50px 50px 0;
     border-radius: 2px;
-    box-shadow: 0 2px 15px #000;
+    overflow: hidden;
+    box-shadow: 0 2px 35px rgba(0, 0, 0, 0.2);
 }
 
 .clients blockquote p{
@@ -159,15 +174,24 @@ header img{
 
 .clients .author{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: left;
+    text-align: center;
+    margin: 50px -50px 0 -50px;
+    padding: 25px 50px;
+    background-color: #3023AE;
+    background-image: linear-gradient(-30deg, #3023AE 0%, #C86DD7 100%);
+    color: #fff;
+
 }
 .clients img{
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    margin-right: 15px;
+    margin-top: -55px;
+    margin-bottom: 10px;
+    border: 2px solid #fff;
 }
 .clients .author p{
     font-family: "Hind Madurai", sans-serif;
@@ -202,16 +226,33 @@ header img{
     opacity: .5;
 }
 
-.social .icon img{
+.social svg{
     height: 18px;
     width: auto;
     vertical-align: middle;
+}
+
+.social .svg-icon{
+    fill: #ddd;
+}
+
+.social li:hover .icon{
+    opacity: 1;
+}
+
+.social li:hover .svg-icon{
+    fill: #AF6FFC;
 }
 
 .blog .date{
     width: 80px;
     display: inline-block;
     opacity: .5;
+}
+
+.blog li:hover .date{
+    color: #AF6FFC;
+    opacity: 1;
 }
 
 .blog .title{
@@ -245,10 +286,10 @@ footer .button{
     padding: 10px 20px;
     display: inline-block;
     color: #fff;
-    background: linear-gradient(#2A8CFF, rgb(14, 109, 218));
+    background: linear-gradient(#AF6FFC, rgb(137, 79, 207));
     border-radius: 10px;
     margin-top: .5rem;
-    box-shadow: 0 2px 15px #000;
+    box-shadow: 0 2px 35px rgba(0, 0, 0, 0.2);
     opacity: .9;
 }
 footer .button:hover{
@@ -291,7 +332,16 @@ footer .button:hover{
     }
 
     nav{
+        grid-template-columns: 1fr 1fr;
+        text-align: right;
+    }
+
+    nav .contact{
         display: none;
+    }
+
+    header{
+        padding-top: 120px;
     }
 
     header img{
@@ -337,3 +387,62 @@ footer .button:hover{
     }
 }
 
+
+/* LIGHT MODE */
+
+body.lightmode{
+    background: #fff;
+    color: #111;
+}
+
+.lightmode a{
+    color: #111;
+    background-image: linear-gradient(180deg, transparent 80%, #AF6FFC 90%, transparent 0), linear-gradient(180deg, transparent 80%, #eee 90%, transparent 0);
+}
+.lightmode a:hover{
+    color: #AF6FFC;
+    background-size: 100% 100%, 100% 100%;
+}
+
+/* nav */
+
+.lightmode nav{
+    background: white;
+    box-shadow: 0 2px 35px rgba(0, 0, 0, 0.1);
+}
+
+.lightmode nav a{
+    background: none;
+}
+
+.lightmode nav .toggle:after{
+    content: "☾";
+}
+
+/* header */
+
+.lightmode header{
+    background: linear-gradient(transparent, #eee);
+}
+
+/* more */
+
+.lightmode .social .svg-icon{
+    fill: #111;
+}
+
+
+/* footer */
+
+.lightmode footer{
+    border-top: 1px solid #eee;
+}
+
+.lightmode footer .button{
+    background: linear-gradient(#AF6FFC, rgb(137, 79, 207));
+    color: #fff;    
+}
+
+.lightmode footer .button:hover{
+    color: #fff;    
+}
