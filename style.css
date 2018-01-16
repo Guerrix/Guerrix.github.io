@@ -379,6 +379,11 @@ footer .button:hover{
         width: 100%;
         padding-bottom: 50px;
     }
+
+    .blog .date{
+        display: block;
+        margin-top: 1rem;
+    }
     .more-social{
         width: 100%;
     }
