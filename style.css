@@ -106,6 +106,7 @@ header{
     text-align: center;
     background: linear-gradient(transparent, #000);
     height: 600px;
+    position: relative;
 }
 header h1{
     font-weight: 600;
@@ -113,10 +114,30 @@ header h1{
 header h2{
     font-weight: 300;
 }
-header img{
-    width: 300px;
-    height: auto;
+header .illustration{
+    width: 268px;
+    height: 542px;
     margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+    margin: 100px auto 0 auto;
+}
+
+header .illustration img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header .ipad{
+    width: 604px;
+    height: auto;
+    position: absolute;
+    bottom: -120px;
+    left: 50%;
+    margin-left: -302px;
 }
 
 /* about */
@@ -350,9 +371,18 @@ footer .button:hover{
         padding-top: 120px;
     }
 
-    header img{
-        width: 280px;
+    header .illustration{
+        width: 134px;
+        height: 271px;
+    }
+
+    header .ipad{
+        width: 302px;
         height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -151px;
     }
 
     .about{
