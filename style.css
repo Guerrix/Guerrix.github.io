@@ -104,7 +104,7 @@ nav .toggle:after{
 header{
     overflow: hidden;
     text-align: center;
-    background: linear-gradient(transparent, #000);
+    background: linear-gradient(#111, #000);
     height: 600px;
     position: relative;
 }
@@ -372,17 +372,14 @@ footer .button:hover{
     }
 
     header .illustration{
-        width: 134px;
-        height: 271px;
+        width: 177px;
+        height: 358px;
     }
 
     header .ipad{
-        width: 302px;
-        height: auto;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        margin-left: -151px;
+        width: 398px;
+        bottom: -60px;
+        margin-left: -199px;
     }
 
     .about{
@@ -428,6 +425,12 @@ footer .button:hover{
     }
 }
 
+@media all and (max-width: 450px){
+    header .ipad{
+        display: none;
+    }
+}
+
 
 /* LIGHT MODE */
 
@@ -463,7 +466,7 @@ body.lightmode{
 /* header */
 
 .lightmode header{
-    background: linear-gradient(transparent, #eee);
+    background: linear-gradient(#fff, #eee);
 }
 
 /* more */
@@ -477,7 +480,7 @@ body.lightmode{
 
 .lightmode footer{
     box-shadow: 0 2px 35px rgba(0, 0, 0, 0.1) inset;
-    background: linear-gradient(transparent, #eee);
+    background: linear-gradient(#fff, #eee);
 }
 
 .lightmode footer .button{
