@@ -268,9 +268,9 @@ header img{
 footer{
     text-align: center;
     padding-top: 50px;
-    padding-left: 0;
-    padding-right: 0;
-    width: 1000px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
     margin: 0 auto;
     background: linear-gradient(#171717, #000);
     box-shadow: 0 2px 35px rgba(0, 0, 0, 0.1) inset;
