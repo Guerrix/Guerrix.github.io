@@ -96,7 +96,7 @@ nav a{
     background: none;
 }
 nav .toggle:after{
-    content: "☀";
+    content: "☼";
 }
 
 /* header */
