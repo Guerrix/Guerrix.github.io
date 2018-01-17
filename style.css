@@ -11,6 +11,10 @@ html{
     font-family: "Hind Madurai", sans-serif;
     font-weight: 300;
     line-height: 1.5;
+
+    --main-accent: #AF6FFC;
+    --secondary-accent: #3023AE;
+    --mid-accent: #7B51DC;
 }
 
 body{
@@ -24,14 +28,14 @@ body{
 a{
     color: #ddd;
     text-decoration: none;
-    background-image: linear-gradient(180deg, transparent 80%, #AF6FFC 90%, transparent 0), linear-gradient(180deg, transparent 80%, #444 90%, transparent 0);
+    background-image: linear-gradient(180deg, transparent 80%, var(--main-accent) 90%, transparent 0), linear-gradient(180deg, transparent 80%, #444 90%, transparent 0);
     background-size: 0 100%, 100% 100%;
     background-repeat: no-repeat;
     transition: background-size 0.2s ease,
     color 0.2s ease;
 }
 a:hover{
-    color: #AF6FFC;
+    color: var(--main-accent);
     background-size: 100% 100%, 100% 100%;
 }
 
@@ -180,8 +184,8 @@ header img{
     text-align: center;
     margin: 50px -50px 0 -50px;
     padding: 25px 50px;
-    background-color: #3023AE;
-    background-image: linear-gradient(-30deg, #3023AE 0%, #C86DD7 100%);
+    background-color: var(--secondary-accent);
+    background-image: linear-gradient(-30deg, var(--secondary-accent) 0%, var(--main-accent) 100%);
     color: #fff;
 
 }
@@ -241,7 +245,7 @@ header img{
 }
 
 .social li:hover .svg-icon{
-    fill: #AF6FFC;
+    fill: var(--main-accent);
 }
 
 .blog .date{
@@ -251,7 +255,7 @@ header img{
 }
 
 .blog li:hover .date{
-    color: #AF6FFC;
+    color: var(--main-accent);
     opacity: 1;
 }
 
@@ -268,7 +272,8 @@ footer{
     padding-right: 0;
     width: 1000px;
     margin: 0 auto;
-    border-top: 1px solid #444;
+    background: linear-gradient(#171717, #000);
+    box-shadow: 0 2px 35px rgba(0, 0, 0, 0.1) inset;
 }
 
 footer .email{
@@ -286,7 +291,8 @@ footer .button{
     padding: 10px 20px;
     display: inline-block;
     color: #fff;
-    background: linear-gradient(#AF6FFC, rgb(137, 79, 207));
+    background-image: linear-gradient(-30deg, var(--secondary-accent) 0%, var(--mid-accent) 100%);
+    background-size: 100% 100%;
     border-radius: 10px;
     margin-top: .5rem;
     box-shadow: 0 2px 35px rgba(0, 0, 0, 0.2);
@@ -402,10 +408,10 @@ body.lightmode{
 
 .lightmode a{
     color: #111;
-    background-image: linear-gradient(180deg, transparent 80%, #AF6FFC 90%, transparent 0), linear-gradient(180deg, transparent 80%, #eee 90%, transparent 0);
+    background-image: linear-gradient(180deg, transparent 80%, var(--main-accent) 90%, transparent 0), linear-gradient(180deg, transparent 80%, #eee 90%, transparent 0);
 }
 .lightmode a:hover{
-    color: #AF6FFC;
+    color: var(--main-accent);
     background-size: 100% 100%, 100% 100%;
 }
 
@@ -440,11 +446,12 @@ body.lightmode{
 /* footer */
 
 .lightmode footer{
-    border-top: 1px solid #eee;
+    box-shadow: 0 2px 35px rgba(0, 0, 0, 0.1) inset;
+    background: linear-gradient(transparent, #eee);
 }
 
 .lightmode footer .button{
-    background: linear-gradient(#AF6FFC, rgb(137, 79, 207));
+    background-image: linear-gradient(-30deg, var(--secondary-accent) 0%, var(--mid-accent) 100%);
     color: #fff;    
 }
 
