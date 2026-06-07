@@ -89,7 +89,7 @@ nav .id{
     text-align: left;
     font-weight: 600;
 }
-nav .contact{
+nav .blog-link{
     text-align: right;
 }
 nav a{
@@ -391,12 +391,8 @@ footer .button:hover{
     }
 
     nav{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         text-align: right;
-    }
-
-    nav .contact{
-        display: none;
     }
 
     header{
