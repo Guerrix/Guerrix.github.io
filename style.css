@@ -207,18 +207,6 @@ header .ipad{
     box-shadow: 0 2px 35px rgba(0, 0, 0, 0.2);
 }
 
-.clients blockquote::before{
-    content: "\201C";
-    font-family: "Inter", sans-serif;
-    font-size: 5rem;
-    font-weight: 600;
-    line-height: 1;
-    color: var(--main-accent);
-    opacity: 0.3;
-    display: block;
-    margin-bottom: -1.5rem;
-}
-
 .clients blockquote p{
     font-family: "Inter", sans-serif;
     font-style: normal;
