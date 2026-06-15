@@ -521,3 +521,90 @@ body.lightmode{
 .lightmode footer .button:hover{
     color: #fff;    
 }
+
+/* Case Study Page */
+
+.case-study-header {
+    height: auto;
+    min-height: auto;
+    padding-top: 110px;
+    padding-bottom: 30px;
+}
+
+.case-study-header h1 {
+    margin-bottom: 12px;
+}
+
+.case-study-header h2 {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.case-study {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.case-study .text {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.case-study p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.case-divider {
+    margin: 60px auto;
+    max-width: 400px;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.button-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+.toptal-proof {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.toptal-proof #toptal-badge {
+    transform: scale(1);
+    transform-origin: top center;
+}
+
+#toptal-badge a,
+#toptal-badge a:hover {
+    background-image: none !important;
+    background-size: auto !important;
+}
+
+#toptal-badge a.f,
+#toptal-badge a.f:hover {
+    background: #296bff !important;
+    color: #fff !important;
+    text-decoration: underline !important;
+    text-decoration-thickness: .5px !important;
+    text-underline-offset: 2px !important;
+}
+
+@media screen and (max-width: 740px) {
+    .case-study-header {
+        padding-top: 90px;
+        padding-bottom: 20px;
+    }
+
+    .case-study {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+}
