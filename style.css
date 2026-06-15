@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Hind+Madurai:300,400,600');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 *{
     margin: 0;
@@ -8,27 +8,41 @@
 
 html{
     font-size: 20px;
-    font-family: "Hind Madurai", sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 300;
     line-height: 1.5;
 
-    --main-accent: #AF6FFC;
-    --secondary-accent: #3023AE;
-    --mid-accent: #7B51DC;
+    --main-accent:      #A78BFA;
+    --mid-accent:       #7C3AED;
+    --secondary-accent: #5B21B6;
+
+    /* dark mode */
+    --bg-dark:      #111214;
+    --surface-dark: #19191C;
+    --text-dark:    #E2E2E5;
+    --muted-dark:   #888890;
+    --border-dark:  #28282E;
+
+    /* light mode */
+    --bg-light:      #FAFAFA;
+    --surface-light: #FFFFFF;
+    --text-light:    #1A1A1E;
+    --muted-light:   #72727A;
+    --border-light:  #E5E5EA;
 }
 
 body{
     margin: 0;
     padding: 0;
-    background: #111;
-    color: #ddd;
+    background: var(--bg-dark);
+    color: var(--text-dark);
     transition: opacity .2s ease-in;
 }
 
 a{
-    color: #ddd;
+    color: var(--text-dark);
     text-decoration: none;
-    background-image: linear-gradient(180deg, transparent 80%, var(--main-accent) 90%, transparent 0), linear-gradient(180deg, transparent 80%, #444 90%, transparent 0);
+    background-image: linear-gradient(180deg, transparent 80%, var(--main-accent) 90%, transparent 0), linear-gradient(180deg, transparent 80%, var(--border-dark) 90%, transparent 0);
     background-size: 0 100%, 100% 100%;
     background-repeat: no-repeat;
     transition: background-size 0.2s ease,
@@ -55,12 +69,13 @@ footer{
 }
 
 h1, h2, h3{
+    letter-spacing: -0.02em;
     line-height: 1.2;
 }
 
 h3{
     margin-bottom: 1rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 p:not(:last-child){
@@ -75,7 +90,7 @@ nav{
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
     height: 50px;
-    background: rgba(0,0,0,.95);
+    background: var(--surface-dark);
     position: fixed;
     top: 0;
     left: 0;
@@ -104,14 +119,13 @@ nav .toggle:after{
 header{
     overflow: hidden;
     text-align: center;
-    background: linear-gradient(#111, #000);
+    background: linear-gradient(var(--bg-dark), var(--surface-dark));
     height: 600px;
     position: relative;
 }
 header h1{
     font-weight: 600;
-}
-header h2{
+}header h2{
     font-weight: 300;
 }
 header .illustration{
@@ -185,17 +199,32 @@ header .ipad{
 .clients blockquote:nth-child(3){ grid-area: second; }
 
 .clients blockquote{
-    background: #fff;
-    color: #111;
+    background: var(--surface-light);
+    color: var(--text-light);
     padding: 50px 50px 0;
     border-radius: 2px;
     overflow: hidden;
     box-shadow: 0 2px 35px rgba(0, 0, 0, 0.2);
 }
 
+.clients blockquote::before{
+    content: "\201C";
+    font-family: "Inter", sans-serif;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--main-accent);
+    opacity: 0.3;
+    display: block;
+    margin-bottom: -1.5rem;
+}
+
 .clients blockquote p{
-    font-family: serif;
-    font-style: italic;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1.7;
 }
 
 .clients .author{
@@ -220,7 +249,7 @@ header .ipad{
     border: 2px solid #fff;
 }
 .clients .author p{
-    font-family: "Hind Madurai", sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
 }
 
@@ -259,7 +288,7 @@ header .ipad{
 }
 
 .social .svg-icon{
-    fill: #ddd;
+    fill: var(--text-dark);
 }
 
 .social li:hover .icon{
@@ -294,7 +323,7 @@ footer{
     padding-right: 20px;
     width: 100%;
     margin: 0 auto;
-    background: linear-gradient(#171717, #000);
+    background: linear-gradient(var(--surface-dark), var(--bg-dark));
     box-shadow: 0 2px 35px rgba(0, 0, 0, 0.1) inset;
 }
 
@@ -325,7 +354,7 @@ footer .button:hover{
 }
 
 .self{
-  background: linear-gradient(135deg, #A96BF8, #3425B0);
+  background: linear-gradient(135deg, var(--main-accent), var(--secondary-accent));
   padding: 5px;
   border-radius: 50%;
 }
@@ -465,13 +494,13 @@ footer .button:hover{
 /* LIGHT MODE */
 
 body.lightmode{
-    background: #fff;
-    color: #111;
+    background: var(--bg-light);
+    color: var(--text-light);
 }
 
 .lightmode a{
-    color: #111;
-    background-image: linear-gradient(180deg, transparent 80%, var(--main-accent) 90%, transparent 0), linear-gradient(180deg, transparent 80%, #eee 90%, transparent 0);
+    color: var(--text-light);
+    background-image: linear-gradient(180deg, transparent 80%, var(--main-accent) 90%, transparent 0), linear-gradient(180deg, transparent 80%, var(--border-light) 90%, transparent 0);
 }
 .lightmode a:hover{
     color: var(--main-accent);
@@ -481,7 +510,7 @@ body.lightmode{
 /* nav */
 
 .lightmode nav{
-    background: white;
+    background: var(--surface-light);
     box-shadow: 0 2px 35px rgba(0, 0, 0, 0.1);
 }
 
@@ -496,13 +525,13 @@ body.lightmode{
 /* header */
 
 .lightmode header{
-    background: linear-gradient(#fff, #eee);
+    background: linear-gradient(var(--bg-light), var(--surface-light));
 }
 
 /* more */
 
 .lightmode .social .svg-icon{
-    fill: #111;
+    fill: var(--text-light);
 }
 
 
@@ -510,7 +539,7 @@ body.lightmode{
 
 .lightmode footer{
     box-shadow: 0 2px 35px rgba(0, 0, 0, 0.1) inset;
-    background: linear-gradient(#fff, #eee);
+    background: linear-gradient(var(--surface-light), var(--bg-light));
 }
 
 .lightmode footer .button{
@@ -564,7 +593,11 @@ body.lightmode{
     margin: 60px auto;
     max-width: 400px;
     border: none;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--border-dark);
+}
+
+.lightmode .case-divider {
+    border-top: 1px solid var(--border-light);
 }
 
 .button-link {
