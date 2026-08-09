@@ -892,20 +892,23 @@ body.lightmode > footer{
 .case-study {
     background: var(--surface-dark);
 }
-.case-study-block{
-    max-width: 42em;
-}
 .case-study-block:not(:last-child){
     margin-bottom: 3rem;
 }
 .case-study-block .meta{
     margin-bottom: 0.55rem;
 }
+.case-study-block h2,
+.case-study-block p{
+    /* 48em matches the total visual extent of Selected Work's
+       number column + gap + 42em body text (there's no number
+       column here, so the text itself needs to reach further). */
+    max-width: 48em;
+}
 .case-study-block p:last-of-type{
     margin-bottom: 0;
 }
 .case-divider {
-    max-width: 42em;
     margin: 0 0 3rem;
     border: none;
     border-top: 1px solid var(--border-dark);
