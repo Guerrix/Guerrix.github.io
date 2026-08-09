@@ -791,7 +791,7 @@ body.lightmode{
 .lightmode .page-header,
 .lightmode .writing,
 .lightmode .clients,
-.lightmode body > footer{
+body.lightmode > footer{
     background: var(--bg-light);
     border-color: var(--border-light);
 }
