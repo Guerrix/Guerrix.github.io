@@ -301,20 +301,20 @@ header .hero-links span{
 
 .about{
     display: grid;
-    grid-template-columns: 220px minmax(0, 1fr);
-    gap: 3.5rem;
-    align-items: start;
+    grid-template-columns: 255px minmax(0, 1fr);
+    gap: 4rem;
+    align-items: center;
     background: var(--surface-dark);
 }
 .about .text{
     max-width: 40em;
 }
 .about .illustration{
-    width: 220px;
+    width: 255px;
 }
 .about .illustration img{
-    width: 200px;
-    height: 200px;
+    width: 235px;
+    height: 235px;
     object-fit: cover;
     display: block;
 }
@@ -743,6 +743,10 @@ body > footer .footer-meta{
     .about{
         grid-template-columns: 1fr;
         gap: 1.35rem;
+    }
+    .about .illustration{
+        width: 112px;
+        margin: 0 auto;
     }
     .about .illustration img{
         width: 112px;
