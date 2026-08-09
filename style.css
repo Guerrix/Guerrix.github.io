@@ -331,15 +331,15 @@ header .hero-links span{
 }
 .writing-list{
     list-style: none;
-    max-width: 860px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 3rem;
+    border-bottom: 1px solid var(--border-dark);
 }
 .writing-list li{
     padding: 1.35rem 0;
     border-top: 1px solid var(--border-dark);
     transition: padding-left 0.2s ease;
-}
-.writing-list li:last-child{
-    border-bottom: 1px solid var(--border-dark);
 }
 .writing-list li:hover{
     padding-left: 0.35rem;
@@ -688,6 +688,9 @@ body > footer .footer-meta{
   .writing-group .article-grid{
     grid-template-columns: 1fr;
   }
+  .writing-list{
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 740px){
@@ -863,6 +866,7 @@ body.lightmode > footer{
 }
 .lightmode .hero-aside,
 .lightmode .hero-aside li,
+.lightmode .writing-list,
 .lightmode .writing-list li,
 .lightmode .work-item,
 .lightmode .writing-group h2,
