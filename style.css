@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+/* Inter font is loaded via <link rel="preconnect"> + <link rel="stylesheet">
+   in each page's <head> instead of @import, so the browser can fetch it in
+   parallel with this stylesheet rather than waiting on a nested request. */
 
 *{
     margin: 0;
