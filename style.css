@@ -473,6 +473,35 @@ header .hero-links span{
     color: var(--text-dark);
     font-weight: 500;
 }
+.testimonials-more{
+    margin-top: 2rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.testimonials-more[hidden]{
+    display: none;
+}
+.testimonials-more.is-visible{
+    opacity: 1;
+}
+.testimonials-toggle{
+    margin-top: 1.75rem;
+    margin-bottom: 0;
+}
+.testimonials-toggle button{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--muted-dark);
+    cursor: pointer;
+}
+.testimonials-toggle button:hover{
+    color: var(--main-accent);
+}
 
 /* connect */
 
@@ -809,6 +838,7 @@ body.lightmode > footer{
 .lightmode .writing-list .kicker,
 .lightmode .work-item .meta,
 .lightmode .clients .author p,
+.lightmode .testimonials-toggle button,
 .lightmode .eyebrow,
 .lightmode .section-lede,
 .lightmode .connect-lede,
