@@ -1,17 +1,21 @@
-$(function(){
-    $('.toggle').click(function(e){
-        e.preventDefault();
-        if($('body').hasClass('lightmode')){
-            $('body').removeClass('lightmode');
-            localStorage.setItem('jGuerraLightMode', 'FALSE');
-        }else{
-            $('body').addClass('lightmode');
-            localStorage.setItem('jGuerraLightMode', 'TRUE');
-        }
-    });
+(function () {
+  var body = document.body;
+  var toggle = document.querySelector('.toggle');
+  var stored = localStorage.getItem('jGuerraLightMode');
 
-    var lightmode = localStorage.getItem('jGuerraLightMode');
-    if(lightmode == 'TRUE'){
-        $('body').addClass('lightmode');
-    }
-});
+  if (stored === 'TRUE') {
+    body.classList.add('lightmode');
+  } else if (stored === 'FALSE') {
+    body.classList.remove('lightmode');
+  }
+
+  if (!toggle) {
+    return;
+  }
+
+  toggle.addEventListener('click', function (e) {
+    e.preventDefault();
+    var isLight = body.classList.toggle('lightmode');
+    localStorage.setItem('jGuerraLightMode', isLight ? 'TRUE' : 'FALSE');
+  });
+})();
